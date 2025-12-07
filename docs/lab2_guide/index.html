@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKU Campus Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f8fb;
+        }
+
+        header {
+            background-color: #4c5caf;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        nav {
+            background-color: #a2b7d5;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: left;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 14px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #717dac;
+            border-radius: 2px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .grid {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .place {
+            background-color: #90caf9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .place h2 {
+            margin-bottom: 10px;
+        }
+
+        .imgs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .imgs img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 540px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .imgs {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <canvas id="logoCanvas" width="200" height="80"></canvas>
+        <div>KKU Campus Guide</div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Welcome to KKU Campus Guide</h1>
+        <p>This webpage introduces important places inside Khon Kaen University.</p>
+    </main>
+
+    <article>
+        <div class="grid">
+
+            <div class="place">
+                <h2>1. ประตูหลักมหาวิทยาลัย (Main Gate)</h2>
+                <p>จุดแลนด์มาร์กที่นักศึกษามักใช้ถ่ายรูปและเป็นจุดเริ่มต้นของมหาวิทยาลัยขอนแก่น</p>
+                <div class="imgs">
+                    <img src="img/m1.jpg" alt="main gate">
+                    <img src="img/m2.jpg" alt="university entrance">
+                </div>
+            </div>
+
+            <div class="place">
+                <h2>2. หอสมุดกลาง (Central Library)</h2>
+                <p>แหล่งรวมความรู้ หนังสือ และพื้นที่อ่านหนังสือที่เงียบสงบสำหรับนักศึกษา</p>
+                <div class="imgs">
+                    <img src="img/m3.jpg" alt="library outside">
+                    <img src="img/m4.jpeg" alt="library inside">
+                </div>
+            </div>
+
+            <div class="place">
+                <h2>3. สนามกีฬา 50 ปี</h2>
+                <p>พื้นที่สำหรับออกกำลังกาย แข่งขันกีฬา และจัดกิจกรรมต่าง ๆ ภายในมหาวิทยาลัย</p>
+                <div class="imgs">
+                    <img src="img/m5.jpg" alt="stadium track">
+                    <img src="img/m6.jpeg" alt="sport area">
+                </div>
+            </div>
+
+            <div class="place">
+                <h2>4. ศูนย์ประชุมอเนกประสงค์กาญจนาภิเษก</h2>
+                <p>พื้นที่รวมชมรมและกิจกรรมต่าง ๆ สำหรับนิสิตนักศึกษาในการทำงานร่วมกัน</p>
+                <div class="imgs">
+                    <img src="img/m7.png" alt="activity building">
+                    <img src="img/m8.jpg" alt="student event">
+                </div>
+            </div>
+        </div>
+        <section style="padding:20px;">
+            <h2>แนะนำสถานที่เพิ่มเติม</h2>
+            <p>กรอกข้อมูลเพื่อแนะนำสถานที่ใหม่ให้เราได้เลย:</p>
+
+            <form action="https://api.web3forms.com/submit" method="POST"
+                style="background:#e3ecff; padding:20px; border-radius:10px; max-width:500px;">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                <label>ชื่อสถานที่:</label><br>
+                <input type="text" name="place_name" required
+                    style="width:100%; padding:8px; margin:8px 0; border-radius:5px; border:1px solid #ccc;"><br>
+
+                <label>รายละเอียด:</label><br>
+                <textarea name="details" required
+                    style="width:100%; padding:8px; height:100px; margin:8px 0; border-radius:5px; border:1px solid #ccc;"></textarea><br>
+
+                <label>URL ของรูปภาพ:</label><br>
+                <input type="url" name="image_url" required
+                    style="width:100%; padding:8px; margin:8px 0; border-radius:5px; border:1px solid #ccc;"><br>
+
+                <button type="submit"
+                    style="padding:10px 20px; background:#4c5caf; color:white; border:none; border-radius:5px; cursor:pointer;">
+                    ส่งข้อมูล
+                </button>
+            </form>
+        </section>
+    </article>
+
+    <footer>
+        <p style="text-align:center; padding:20px; background-color:#4c5caf; color:white;">
+            © 2025 Mobile Web — 663380610-6 ภัทราวดี ส่องศรีโรจน์
+        </p>
+    </footer>
+    <script>
+        // Draw simple animated logo
+        const c = document.getElementById('logoCanvas');
+        const ctx = c.getContext('2d');
+        let x = 0;
+        function animate() {
+            ctx.clearRect(0, 0, c.width, c.height);
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 28px Arial';
+            ctx.fillText('KKU', 70, 50);
+            ctx.fillStyle = '#ffeb3b';
+            ctx.beginPath();
+            ctx.arc(30 + x, 40, 15, 0, Math.PI * 2);
+            ctx.fill();
+            x += 1;
+            if (x > 140) x = 0;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+</body>
+
+</html>
