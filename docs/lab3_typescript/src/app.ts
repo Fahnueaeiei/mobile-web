@@ -72,13 +72,9 @@ function renderTable(elementId: string = "studentTableBody"): void {
  alert(`พบในสาขา: ${results.length} คน`);
 };
 
-
-// เพิ่มค้นหาด้วย Email
 (document.getElementById("searchEmailBtn") as HTMLButtonElement).onclick = () => {
  const email = (document.getElementById("searchEmail") as HTMLInputElement).value;
  const result = manager.findStudentByEmail(email);
-
-
  if (result) {
    showList<Student>([result]);
    alert(`พบอีเมล: ${result.email}`);
