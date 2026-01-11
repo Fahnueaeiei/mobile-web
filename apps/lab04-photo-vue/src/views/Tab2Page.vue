@@ -4,7 +4,7 @@
       <ion-toolbar>
         <ion-title>Photo Gallery</ion-title>
         <div style="font-size: 0.85rem; opacity: 0.8;">
-            โดย ภัทราวดี ส่องศรีโรจน์ 663380610-6
+            โดย ศุจีภรณ์ ภูบาลชื่น 663380613-0
           </div>
       </ion-toolbar>
     </ion-header>
